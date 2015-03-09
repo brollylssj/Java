@@ -13,6 +13,17 @@ public class ONP
  private String expression; // rozpatrywane wyra¿enie
  private double result;   // wynik ONP
 
+ 
+ public String getInput() {
+		return input;
+	}
+
+	public String getExpression() {
+		return expression;
+	}
+ 
+ 
+ 
 /**
  * metoda zwracajaca wynik
  * @return zwraca wynik wyrazenia
@@ -47,14 +58,11 @@ public class ONP
   * metoda obliczajaca
   */
 public void makeONP() {
-        
-  // tworzymy pusty stos
-  Stos stos = new Stos(256);
-        
+          
+  Stos stos = new Stos(256); // tworzymy stos
   // dzielimy wyra¿enie na czêœci na podstawie +-*/()#%^
   StringTokenizer piece = new StringTokenizer(input, "+-*/()#%^", true);
-        
-  // dopóki s¹ elementy w wyra¿eniu wejœciowym
+
   while(piece.hasMoreTokens()) {
    // pobieramy element
    String nextCharacter = piece.nextToken();
@@ -78,59 +86,57 @@ public void makeONP() {
     // œci¹gamy nawias otwieraj¹cy
     stos.pop();
    }
-   // je¿eli element nie jest operatorem ani nawiasem dodajemy go do wyra¿enia postfiksowego
+   // je¿eli element jest liczba dodajemy go do wyrazenia
    else expression += nextCharacter  + " ";
   }
-  // œci¹gamy ze stosu pozosta³e operatory i dodajemy je do wyra¿enia postfiksowego
+  // œci¹gamy ze stosu pozosta³e operatory i dodajemy je do wyra¿enia
   while(!stos.isEmpty()) expression += stos.pop()  + " ";
         
  } 
 
 /**
- * 
- * 
+ * metoda
  */
  // metoda oblicza wartoœæ wyra¿enia postfiksowego
  private double oblicz() {
   
-  // tworzymy pusty stos
-  Stack<Double> stos = new Stack<Double>();
-        
+ // Stack<Double> stos = new Stack<Double>();
+	 Stos stosDouble = new Stos(256,"double"); // tworzymy stos
   // dzielimy wyra¿enie postfiksowe na elementy na podstawie spacji
-  StringTokenizer st = new StringTokenizer(expression, " ");
+  StringTokenizer share = new StringTokenizer(expression, " ");
         
   // dopóki s¹ elementy w wyra¿eniu wejœciowym
-  while(st.hasMoreTokens()) {
+  while(share.hasMoreTokens()) {
 
    // pobieramy element
-   String s = st.nextToken();
+   String element = share.nextToken();
   
    // jeœli element nie jest operatorem (czyli jest wartoœci¹)
-   if (!s.equals("+") && !s.equals("*") && !s.equals("-") && !s.equals("/") && !s.equals("%")&& !s.equals("^") && !s.equals("#") ) {
+   if (!element.equals("+") && !element.equals(")")&&!element.equals("(") && !element.equals("*") && !element.equals("-") && !element.equals("/") && !element.equals("%")&& !element.equals("^") && !element.equals("#") ) {
     // zamieniamy ³añcuch na liczbê
-    double wartosc = Double.parseDouble(s);
+    double wartosc = Double.parseDouble(element);
     // odk³adamy wartoœæ na stos
-    stos.push(wartosc);
+    stosDouble.pushDouble(wartosc);
    }
    else 
    {
     //  jeœli element jest operatorem œci¹gamy dwie wartoœci ze stosu
-    double wartosc1 = stos.pop();
-    double wartosc2 = stos.pop();
+    double wartosc1 = stosDouble.popDouble();
+    double wartosc2 = stosDouble.popDouble();
     // w zale¿noœci od operatora obliczamy wynik i odk³adamy go na stos
-    switch(s.charAt(0)) {
-     case '*': {stos.push(wartosc2 * wartosc1); break;}
-     case '+': {stos.push(wartosc2 + wartosc1); break;}
-     case '-': {stos.push(wartosc2 - wartosc1); break;}
-     case '/': {stos.push(wartosc2 / wartosc1); break;}
-     case '%': {stos.push(wartosc2 % wartosc1); break;}
-     case '#': {stos.push(Math.exp(Math.log(wartosc1))/wartosc2); break;}// pierwiastek wartosc2 -stopnia z warosc1
-     case '^': {stos.push(Math.pow(wartosc2,wartosc1)); break;} 
+    switch(element.charAt(0)) { 		// charAt bierze z pierwszego miejsca znak i sprawdza jakie dzialanie wykonac
+     case '*': {stosDouble.pushDouble(wartosc2 * wartosc1); break;}
+     case '+': {stosDouble.pushDouble(wartosc2 + wartosc1); break;}
+     case '-': {stosDouble.pushDouble(wartosc2 - wartosc1); break;}
+     case '/': {stosDouble.pushDouble(wartosc2 / wartosc1); break;}
+     case '%': {stosDouble.pushDouble(wartosc2 % wartosc1); break;}
+     case '#': {stosDouble.pushDouble(Math.exp(Math.log(wartosc1))/wartosc2); break;}// pierwiastek wartosc2 -stopnia z warosc1
+     case '^': {stosDouble.pushDouble(Math.pow(wartosc2,wartosc1)); break;} 
      
     }
    }
   }
-  return stos.pop();
+  return stosDouble.popDouble();
  }
-
+ 
 }

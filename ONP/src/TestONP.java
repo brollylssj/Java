@@ -13,6 +13,6 @@ public class TestONP {
   // i przekazujemy do konstruktora pobrane od u¿ytkownika wyra¿enie
   ONP onp = new ONP(expression);
   System.out.println(onp.getWynik());
-
+  System.out.println("Postac ONP:"+ onp.getExpression());
  }
 }
