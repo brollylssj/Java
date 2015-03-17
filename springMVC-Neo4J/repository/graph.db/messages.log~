@@ -1,0 +1,1736 @@
+2015-03-14 14:14:16.298+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:14:16.379+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:14:16.381+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:14:16.386+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:14:16.387+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 200,05 MB
+    Committed virtual memory: 2,54 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,50 GB
+2015-03-14 14:14:16.390+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 227,86 MB
+    Total memory: 360,50 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,10 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=231,00 MB, used=80,14 MB, max=253,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=35,00 MB, used=0,00 B, max=35,00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=94,50 MB, used=52,50 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=31,50 MB, used=23,02 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:14:16.394+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 98
+    Process id: 13212@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:14:16.396+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:14:16.396+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:14:16.401+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:14:16.401+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:14:16.402+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:14:16.407+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:14:16.408+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:14:16.416+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:14:16.416+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:20:30.850+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:20:30.972+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:20:30.974+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:20:30.981+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:20:30.982+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 179,61 MB
+    Committed virtual memory: 2,54 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,45 GB
+2015-03-14 14:20:30.987+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 153,17 MB
+    Total memory: 328,00 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,08 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=220,00 MB, used=87,62 MB, max=252,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=35,50 MB, used=28,02 MB, max=35,50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=72,50 MB, used=59,19 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=23,02 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:20:30.992+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 98
+    Process id: 13676@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:20:30.995+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:20:30.996+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:20:31.003+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:20:31.003+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:20:31.005+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:20:31.011+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:20:31.013+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:20:31.021+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:20:31.021+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:28:03.650+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:28:03.743+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:28:03.745+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:28:03.751+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:28:03.785+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 209,64 MB
+    Committed virtual memory: 2,54 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,31 GB
+2015-03-14 14:28:03.789+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 156,33 MB
+    Total memory: 255,50 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=1,81 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=154,50 MB, used=25,29 MB, max=263,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=31,00 MB, used=19,32 MB, max=31,00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=70,00 MB, used=54,57 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=23,02 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:28:03.792+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 98
+    Process id: 13994@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:28:03.794+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:28:03.795+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:28:03.799+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:28:03.800+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:28:03.811+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:28:03.815+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:28:03.816+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:28:03.823+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:28:03.824+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:29:01.150+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:29:01.232+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:29:01.234+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:29:01.239+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:29:01.239+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 236,31 MB
+    Committed virtual memory: 2,60 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,31 GB
+2015-03-14 14:29:01.243+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 109,71 MB
+    Total memory: 320,00 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,11 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=213,00 MB, used=128,30 MB, max=255,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=34,00 MB, used=26,93 MB, max=34,00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=73,00 MB, used=55,06 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=25,65 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:29:01.247+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 99
+    Process id: 14229@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:29:01.249+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:29:01.249+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:29:01.254+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:29:01.254+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:29:01.256+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:29:01.260+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:29:01.261+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:29:01.271+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:29:01.271+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:29:02.587+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:29:02.588+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:29:02.588+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:29:02.588+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:29:02.588+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 207,82 MB
+    Committed virtual memory: 3,17 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,31 GB
+2015-03-14 14:29:02.590+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 49,72 MB
+    Total memory: 320,00 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,12 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=213,00 MB, used=188,29 MB, max=255,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=34,00 MB, used=26,93 MB, max=34,00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=73,00 MB, used=55,06 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=26,70 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:29:02.594+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 76
+    Process id: 14229@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:29:02.595+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:29:02.595+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:29:02.598+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:29:02.599+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:29:02.599+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:29:02.602+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:29:02.603+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:29:02.604+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:29:02.604+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:29:07.513+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:29:07.513+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:29:07.513+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:29:07.513+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:29:07.514+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 179,09 MB
+    Committed virtual memory: 3,23 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,31 GB
+2015-03-14 14:29:07.515+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 25,01 MB
+    Total memory: 320,00 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,13 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=213,00 MB, used=213,00 MB, max=255,00 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=34,00 MB, used=26,93 MB, max=34,00 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=73,00 MB, used=55,06 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=26,92 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:29:07.518+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 76
+    Process id: 14229@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:29:07.519+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:29:07.519+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:29:07.521+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:29:07.521+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:29:07.521+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:29:07.525+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:29:07.526+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:29:07.527+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:29:07.527+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:29:55.612+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:29:55.726+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:29:55.729+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:29:55.735+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:29:55.736+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 212,15 MB
+    Committed virtual memory: 2,54 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,34 GB
+2015-03-14 14:29:55.741+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 140,61 MB
+    Total memory: 313,50 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,02 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=206,50 MB, used=89,38 MB, max=254,50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=33,50 MB, used=29,46 MB, max=33,50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=73,50 MB, used=54,05 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=23,02 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:29:55.746+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 98
+    Process id: 14454@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:29:55.749+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:29:55.749+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:29:55.756+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:29:55.757+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:29:55.758+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:29:55.764+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:29:55.766+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:29:55.777+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:29:55.777+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
+2015-03-14 14:35:19.593+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-03-14 14:35:19.725+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-03-14 14:35:19.728+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=/home/mateusz-b/workspace/springMVC-Neo4J/repository/graph.db
+    ephemeral=false
+2015-03-14 14:35:19.747+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2015-03-14 14:35:19.761+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3,81 GB
+    Free Physical memory: 1,37 GB
+    Committed virtual memory: 2,60 GB
+    Total swap space: 14,90 GB
+    Free swap space: 14,90 GB
+2015-03-14 14:35:19.781+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 147,08 MB
+    Total memory: 322,00 MB
+    Max   memory: 867,50 MB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=2,09 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=216,50 MB, used=87,46 MB, max=255,50 MB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=33,50 MB, used=27,68 MB, max=33,50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=72,00 MB, used=59,78 MB, max=650,50 MB, threshold=0,00 B
+    Memory Pool: PS Perm Gen (Non-heap memory): committed=27,50 MB, used=23,02 MB, max=166,00 MB, threshold=0,00 B
+2015-03-14 14:35:19.785+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.16.0-31-generic; arch: amd64; cpus: 4
+    Max number of file descriptors: 40000
+    Number of open file descriptors: 98
+    Process id: 2557@mateusz-linux
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Warsaw
+2015-03-14 14:35:19.800+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.75-b04
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dcatalina.base=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0, -Dcatalina.home=/opt/apache-tomcat, -Dwtp.deploy=/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps, -Djava.endorsed.dirs=/opt/apache-tomcat/endorsed, -Dfile.encoding=UTF-8]
+2015-03-14 14:35:19.801+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-kernel-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-dsl-2.0.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jcl-over-slf4j-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-matching-2.1.5.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjrt-1.6.10.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-graph-algo-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-dbcp.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-storeconfig.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-tribes.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jasper-el.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-util-scan.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/lucene-core-3.6.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/jstl-1.2.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/scala-library-2.10.4.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-spdy.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+     [loader.1] file:/opt/apache-tomcat/lib/el-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-udc-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-scala_2.10-1.1.6.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-neo4j-3.2.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.0-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jni.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/log4j-1.2.15.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-1.9-2.0.3.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+     [loader.1] file:/opt/apache-tomcat/lib/
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-primitive-collections-2.2.0-M04.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/classes/
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-coyote.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-websocket.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-jmx-2.1.5.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/tomcat-juli.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/parboiled-core-1.1.6.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/opencsv-2.0.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-es.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/javax.inject-1.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ha.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+     [loader.1] file:/opt/apache-tomcat/lib/servlet-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-ja.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/jsp-api.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-tx-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-aspects-4.0.9.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aopalliance-1.0.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-commons-2.1.5.jar
+     [loader.1] file:/opt/apache-tomcat/lib/catalina-ant.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-api-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+     [classpath + loader.2] file:/opt/apache-tomcat/bin/bootstrap.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-i18n-fr.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-io-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/ecj-4.4.1.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/slf4j-log4j12-1.6.6.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-cypher-compiler-2.1-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/aspectjweaver-1.8.4.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-data-commons-1.9.2.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-expression-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-lucene-index-2.1.5.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/neo4j-csv-2.2.0-M04.jar
+     [loader.1] file:/opt/apache-tomcat/lib/tomcat-jdbc.jar
+     [loader.0] file:/home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/springMVC-Neo4J/WEB-INF/lib/validation-api-1.0.0.GA.jar
+     [loader.3] file:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+     [loader.1] file:/opt/apache-tomcat/lib/websocket-api.jar
+     [loader.1] file:/opt/apache-tomcat/lib/annotations-api.jar
+2015-03-14 14:35:19.807+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/amd64
+    /usr/lib/x86_64-linux-gnu/jni
+    /lib/x86_64-linux-gnu
+    /usr/lib/x86_64-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2015-03-14 14:35:19.807+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+    shared.loader = 
+    path.separator = :
+    tomcat.util.buf.StringCache.byte.enabled = true
+    file.encoding.pkg = sun.io
+    user.country = PL
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = unknown
+    tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-core*.jar,log4j-taglib*.jar
+    user.dir = /opt/apache-tomcat
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = /home/mateusz-b
+    catalina.useNaming = true
+    user.timezone = Europe/Warsaw
+    file.encoding = UTF-8
+    tomcat.util.scan.StandardJarScanFilter.jarsToSkip = bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar
+    catalina.home = /opt/apache-tomcat
+    user.name = mateusz-b
+    package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.
+    sun.java.command = org.apache.catalina.startup.Bootstrap start
+    sun.arch.data.model = 64
+    user.language = pl
+    awt.toolkit = sun.awt.X11.XToolkit
+    server.loader = 
+    catalina.base = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+    file.separator = /
+    common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    wtp.deploy = /home/mateusz-b/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+    package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2015-03-14 14:35:19.820+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2015-03-14 14:35:19.826+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:ce52:afff:fe5f:ed1e%3
+        address: 192.168.0.13
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2015-03-14 14:35:19.827+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-03-14 14:35:19.844+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics START ---
+2015-03-14 14:35:19.844+0000 INFO  [org.neo4j]: --- SHUTDOWN diagnostics END ---
