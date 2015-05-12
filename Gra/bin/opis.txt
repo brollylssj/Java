@@ -1,0 +1,15 @@
+Gracz pierwszy moze wybrac jedna z dostepnych profesji dla siebie
+-Lucznik
+-Paladyn
+-Mag
+-Assasin
+Oraz walczyc z wybranymi stworzeniami podczas jego wedrowki bedzie zdobywal doswiadczenie oraz mogl pokonywac
+mocniejsze potwory z czasemm zdobywamy wiecej doswiadczenia i mozemy pokonywac silniejsze potwory oraz rozwijamy swoja postac
+
+Posiadamy klasy
+-Lucznik
+-Paladyn
+-Mag
+-Assasin
+sa odpowiednimi podklasami klasy Postac 
+oraz klase Potwor z którymi bedziemy sie mierzyc
